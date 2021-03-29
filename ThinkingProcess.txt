@@ -1,0 +1,36 @@
+First, I will set up the project and then
+
+I will mock the UI so can get an idea of how it should look.
+You can find a simple mock the app in the ui-mocks folder
+
+With that done, I will start to code the UI.
+
+Now that the feed is ready, I will fetch the posts data.
+I will assume I can only use the url specified in the instructions:
+https://jsonplaceholder.typicode.com/posts
+https://jsonplaceholder.typicode.com/comments
+
+
+With the feed done, I need to show the comments related to an specific posts. 
+For that I will use a different component 
+and also I will use react-router for basic navigation.
+
+
+The URL: https://jsonplaceholder.typicode.com/comments
+gives me all the comments mixed, my solution to that will be 
+to filter the comments by postId
+The optimal approach would have been and endpoint like:
+https://jsonplaceholder.typicode.com/comments?postId=5
+But let's stick to it.
+
+After styling the components a bit, the feed its and you can see the comments.
+
+Now, I will set up redux in its actions.
+I will store the posts and the comments in Redux once I fetch them just 
+to take advantage of the storage.
+Also, I will create a UserInSession to simulate a logged user.
+Now I can add comments and they will be stored in Redux 
+and displaying them is fairly easy the usage of useSelector.
+Another approach could have been making API calls every time
+and storing in Redux just the comments made by the user, that way I could fetch the comments
+and combine them with user comments of the posts with some filters and spread operators.
