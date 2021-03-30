@@ -2,11 +2,11 @@ import './../../styling/theme.css';
 import './Button.css';
 import PropTypes from 'prop-types';
 
-const Button = ({title,onClick,className})=> (<button className='btn secondary-color' onClick={onClick}>{title}</button>);
+const Button = ({ title, onClick }) => (<button className='btn secondary-color' onClick={onClick}>{title}</button>);
 
 Button.defaultProps = {
   title: '',
-  onClick: ()=>{},
+  onClick: () => { },
 };
 
 Button.propTypes = {
